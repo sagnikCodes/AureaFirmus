@@ -48,7 +48,7 @@ def predict():
     X_test,y_test=create_dataset(new_data[['Close']], new_data[['Close']],60)
 
     #Fine tuning the overall model trained
-    gru_model.fit(X_test,y_test,epochs=10,batch_size=8)
+    gru_model.fit(X_test,y_test,epochs=3,batch_size=8)
 
     new_x_test=np.array(new_data[len(company_data)-60:]).reshape(1,60,1)
     pred=gru_model.predict(new_x_test)
