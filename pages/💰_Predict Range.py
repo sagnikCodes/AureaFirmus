@@ -65,4 +65,6 @@ if(st.button('Predict Range')):
     predicted_price=np.array(predicted_price)
     mean=predicted_price.mean()
     standard_deviation=predicted_price.std()+0.5643
-    st.write('The expected Range of Opening Price tommorow is [ '+str(mean-standard_deviation)+','+str(mean+standard_deviation)+' ]')
+    lowerBound=mean-standard_deviation
+    upperBound=mean+standard_deviation
+    st.title(f'The expected Range of Opening Price for {company_name} tommorow is [ {lowerBound},{upperBound} ]')
