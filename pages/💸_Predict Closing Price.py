@@ -59,4 +59,4 @@ if(st.button('Predict Closing Price')):
     for layer in gru_model.layers:
       layer.trainable=False
     predicted_price=predict()
-    st.write('The expected Closing Price tommorow is '+str(predicted_price))
+    st.write('The expected Closing Price tommorow is '+str(round(predicted_price,2)))
