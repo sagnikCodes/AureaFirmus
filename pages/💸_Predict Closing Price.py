@@ -19,11 +19,13 @@ def inverse(a,b):
   m2=b.max()
   return a*(m2-m1)+m1
 
-company_name=st.text_input("Enter Company Name")
+companyDict=joblib.load('company')
+company_name=st.selectbox("Enter Company Name",list(companyDict.key()))
+company_ticker=companyDict[company_name]
 
 def predict():
     #Extracting the data of the company entered by user 
-    ticker_symbol=company_name.upper()+".NS"
+    ticker_symbol=company_ticker.upper()+".NS"
     days_back=15
     interval='15m'
     end_date=datetime.datetime.now().strftime('%Y-%m-%d')
@@ -57,4 +59,4 @@ if(st.button('Predict Closing Price')):
     for layer in gru_model.layers:
       layer.trainable=False
     predicted_price=predict()
-    st.write(f'The expected Closing Price for {company_name} tommorow is {round(predicted_price,2)}')
+    st.write('The expected Closing Price tommorow is ',predicted_price)
