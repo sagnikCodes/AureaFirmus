@@ -67,4 +67,4 @@ if(st.button('Predict Range')):
     standard_deviation=predicted_price.std()+0.5643
     lowerBound=mean-standard_deviation
     upperBound=mean+standard_deviation
-    st.title(f'The expected Range of Opening Price for {company_name} tommorow is [ {lowerBound},{upperBound} ]')
+    st.write(f'The expected Range of Opening Price for {company_name} tommorow is [ {lowerBound},{upperBound} ]')
