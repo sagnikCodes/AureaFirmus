@@ -10,7 +10,7 @@ import pickle
 import tensorflow as tf
 
 st.title('Predict Stock Price of any Company')
-st.write('Discover the anticipated range of tomorrow's opening price for any company with just a single click, providing you with valuable insights.')
+st.write("Discover the anticipated range of tomorrow's opening price for any company with just a single click, providing you with valuable insights.")
 st.write('Disclaimer : The Prediction might take upto a minute. Please be patient')
 scaler=joblib.load('scaler.pkl')
 gru_model=tf.keras.models.load_model('gru_model.h5')
