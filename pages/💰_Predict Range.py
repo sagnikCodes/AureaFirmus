@@ -22,7 +22,7 @@ def inverse(a,b):
   return a*(m2-m1)+m1
 
 companyDict=joblib.load('company')
-company_name=st.selectbox("Enter Company Name",list(companyDict.key()))
+company_name=st.selectbox("Enter Company Name",list(companyDict.keys()))
 company_ticker=companyDict[company_name]
 
 def predict():
