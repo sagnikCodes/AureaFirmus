@@ -21,11 +21,13 @@ def inverse(a,b):
   m2=b.max()
   return a*(m2-m1)+m1
 
-company_name=st.text_input("Enter Company Name")
+companyDict=joblib.load('company')
+company_name=st.selectbox("Enter Company Name",list(companyDict.key()))
+company_ticker=companyDict[company_name]
 
 def predict():
     #Extracting the data of the company entered by user 
-    ticker_symbol=company_name.upper()+".NS"
+    ticker_symbol=company_ticker.upper()+".NS"
     days_back=15
     interval='15m'
     end_date=datetime.datetime.now().strftime('%Y-%m-%d')
@@ -65,6 +67,4 @@ if(st.button('Predict Range')):
     predicted_price=np.array(predicted_price)
     mean=predicted_price.mean()
     standard_deviation=predicted_price.std()+0.5643
-    lowerBound=mean-standard_deviation
-    upperBound=mean+standard_deviation
-    st.write(f'The expected Range of Opening Price for {company_name} tommorow is [ {lowerBound},{upperBound} ]')
+    st.write('The expected Range of Opening Price tommorow is [ '+str(mean-standard_deviation)+','+str(mean+standard_deviation)+' ]')
