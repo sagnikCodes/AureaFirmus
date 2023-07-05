@@ -57,4 +57,4 @@ if(st.button('Predict Closing Price')):
     for layer in gru_model.layers:
       layer.trainable=False
     predicted_price=predict()
-    st.title(f'The expected Closing Price for {company_name} tommorow is {predicted_price}')
+    st.title(f'The expected Closing Price for {company_name} tommorow is {round(predicted_price,2)}')
