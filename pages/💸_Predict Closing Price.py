@@ -20,7 +20,7 @@ def inverse(a,b):
   return a*(m2-m1)+m1
 
 companyDict=joblib.load('company')
-company_name=st.selectbox("Enter Company Name",list(companyDict.keys()))
+company_name=st.selectbox("Select Company",list(companyDict.keys()))
 company_ticker=companyDict[company_name]
 
 def predict():
@@ -59,4 +59,4 @@ if(st.button('Predict Closing Price')):
     for layer in gru_model.layers:
       layer.trainable=False
     predicted_price=predict()
-    st.write('The expected Closing Price tommorow is ',predicted_price)
+    st.write('The expected Closing Price tommorow is '+str(predicted_price))
