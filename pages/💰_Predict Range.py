@@ -17,8 +17,6 @@ st.set_page_config(
     page_title="📈Opening Price"
 )
 
-st.set_theme('dark')
-
 col1,col2=st.columns(2)
 
 def load_lottieurl(url: str):
