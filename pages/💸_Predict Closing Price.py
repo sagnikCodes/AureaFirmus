@@ -8,10 +8,18 @@ import time
 import yfinance as yf
 import pickle
 import tensorflow as tf
-
+from streamlit_lottie import st_lottie
+import requests
 st.set_page_config(
     page_title="📈Closing Price"
 )
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
 
 col1,col2=st.columns(2)
 
