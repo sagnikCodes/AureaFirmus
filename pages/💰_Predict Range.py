@@ -27,13 +27,13 @@ def load_lottieurl(url: str):
 
 with col1:
     stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_bkozdh8w.json")
-    st_lottie(stocks,width=1000,height=750)
+    st_lottie(stocks,width=250,height=200)
 with col2:
     stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_bkozdh8w.json")
-    st_lottie(stocks,width=1000,height=750)
+    st_lottie(stocks,width=250,height=200)
 with col3:
     stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_dwivte2j.json")
-    st_lottie(stocks,width=1000,height=750)
+    st_lottie(stocks,width=250,height=200)
 
 st.title('Predict Stock Price of any Company')
 st.write("Discover the anticipated range of tomorrow's opening price for any company with just a single click, providing you with valuable insights.")
