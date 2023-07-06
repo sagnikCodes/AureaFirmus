@@ -3,10 +3,10 @@ from streamlit_lottie import st_lottie
 import requests
 
 st.set_page_config(
-    page_title="💸Homepage"
+    page_title="💸Homepage",
+    initial_sidebar_state="expanded"
+    layout="wide"
 )
-
-st.set_theme('dark')
 
 def load_lottieurl(url: str):
     r = requests.get(url)
