@@ -24,7 +24,7 @@ def load_lottieurl(url: str):
     return r.json()
     
 stocks=load_lottieurl("https://assets7.lottiefiles.com/private_files/lf30_F3v2Nj.json")
-st_lottie(stocks,width=250,height=300)
+st_lottie(stocks,width=500,height=500)
 
 st.title('Predict Stock Price of any Company')
 st.write("Discover the anticipated range of tomorrow's opening price for any company with just a single click, providing you with valuable insights.")
