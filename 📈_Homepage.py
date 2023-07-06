@@ -4,7 +4,7 @@ import requests
 
 st.set_page_config(
     page_title="💸Homepage",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
     layout="wide"
 )
 
