@@ -9,6 +9,10 @@ import yfinance as yf
 import pickle
 import tensorflow as tf
 
+st.set_page_config(
+    page_title="📈Closing Price"
+)
+
 st.title('Predict Stock Price of any Company')
 st.write('You can now know the closing price of any Company on the next day! You are just 1 click away!')
 scaler=joblib.load('scaler.pkl')
