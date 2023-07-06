@@ -26,10 +26,10 @@ def load_lottieurl(url: str):
     return r.json()
 
 with col1:
-    stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_bkozdh8w.json")
+    stocks=load_lottieurl("https://assets7.lottiefiles.com/private_files/lf30_F3v2Nj.json")
     st_lottie(stocks,width=250,height=200)
 with col2:
-    stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_bkozdh8w.json")
+    stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_8qcUBnwnVm.json")
     st_lottie(stocks,width=250,height=200)
 with col3:
     stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_dwivte2j.json")
