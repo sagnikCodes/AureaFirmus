@@ -13,6 +13,17 @@ st.set_page_config(
     page_title="📈Closing Price"
 )
 
+col1,col2=st.columns(2)
+
+with col1:
+    stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_dwivte2j.json")
+    st_lottie(stocks)
+
+with col2:
+    stocks=load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_fgba6oco.json")
+    st_lottie(stocks)
+
+
 st.title('Predict Stock Price of any Company')
 st.write('You can now know the closing price of any Company on the next day! You are just 1 click away!')
 scaler=joblib.load('scaler.pkl')
