@@ -19,4 +19,4 @@ with col1:
     st.write("Presenting AureaFirmus - The Golden Path to Stock Prognostication.We are here to assist you every step of the way, providing invaluable insights and empowering you to make informed decisions. Additionally, our expertise extends to predicting closing prices, equipping you with a strategic advantage in optimizing your investment strategies. Let us be your trusted companion on this thrilling journey, as we empower you to unlock the full potential of your financial aspirations.")
 with col2:
     stocks=load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_kuhijlvx.json")
-    st_lottie(stocks,width=300,height=300)
+    st_lottie(stocks,width=200,height=200)
