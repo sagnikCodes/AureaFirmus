@@ -8,10 +8,23 @@ import time
 import yfinance as yf
 import pickle
 import tensorflow as tf
+from streamlit_lottie import st_lottie
+import requests
+
+
 
 st.set_page_config(
     page_title="📈Opening Price"
 )
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+    
+stocks=load_lottieurl("https://assets7.lottiefiles.com/private_files/lf30_F3v2Nj.json")
+st_lottie(stocks,width=250,height=300)
 
 st.title('Predict Stock Price of any Company')
 st.write("Discover the anticipated range of tomorrow's opening price for any company with just a single click, providing you with valuable insights.")
